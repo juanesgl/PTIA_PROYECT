@@ -60,6 +60,13 @@ export const PlanningService = {
     const response = await api.get(`/students/${studentId}/history`);
     return response.data;
   },
+  toggleHistory: async (studentId: string, courseId: string): Promise<void> => {
+    await api.post(`/students/${studentId}/history/toggle`, { course_id: courseId });
+  },
+  getGpa: async (studentId: string): Promise<{ gpa: number }> => {
+    const response = await api.get(`/students/${studentId}/gpa`);
+    return response.data;
+  },
   getCriticalPath: async (studentId: string): Promise<CriticalPathResponse> => {
     const response = await api.get(`/students/${studentId}/critical-path`);
     return response.data;

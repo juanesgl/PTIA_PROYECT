@@ -92,10 +92,27 @@ export function CurriculumMap() {
       
       const depthValues = Object.values(depths) as number[];
       const maxDepth = depthValues.length > 0 ? Math.max(...depthValues) : 0;
+      
+      // Calculate full critical path
+      const criticalPathNodes = new Set<string>();
+      if (maxDepth > 0) {
+        let currentNodes = graphData.nodes.filter(n => depths[n.id] === maxDepth).map(n => n.id);
+        while (currentNodes.length > 0) {
+           currentNodes.forEach(id => criticalPathNodes.add(id));
+           const currentDepth = depths[currentNodes[0]];
+           const nextNodes = new Set<string>();
+           graphData.edges.forEach(e => {
+             if (currentNodes.includes(e.source) && depths[e.target] === currentDepth - 1) {
+                nextNodes.add(e.target);
+             }
+           });
+           currentNodes = Array.from(nextNodes);
+        }
+      }
 
       const newNodes: Node[] = graphData.nodes.map(n => {
-        const depth = depths[n.id] || 0;
         const isCompleted = completedSet.has(n.id);
+        const isCritical = criticalPathNodes.has(n.id);
         
         let bg = '#fff';
         let border = '1px solid #777';
@@ -105,7 +122,7 @@ export function CurriculumMap() {
           bg = '#dcfce7'; // green-100
           border = '2px solid #22c55e'; // green-500
           priority = 'Completado';
-        } else if (depth === maxDepth && maxDepth > 0) {
+        } else if (isCritical) {
           bg = '#e0e7ff'; // indigo-100
           border = '2px solid #6366f1'; // indigo-500
           priority = 'Ruta Crítica';
@@ -120,8 +137,7 @@ export function CurriculumMap() {
       });
 
       const newEdges: Edge[] = graphData.edges.map(e => {
-        const targetDepth = depths[e.target] || 0;
-        const isCritical = (targetDepth === maxDepth) && (maxDepth > 0);
+        const isCritical = criticalPathNodes.has(e.source) && criticalPathNodes.has(e.target) && depths[e.source] === (depths[e.target] || 0) + 1;
         return {
           id: `e${e.source}-${e.target}`,
           source: e.source,
@@ -138,15 +154,15 @@ export function CurriculumMap() {
 
       const detailsDict: Record<string, SubjectDetails> = {};
       graphData.nodes.forEach(n => {
-        const depth = depths[n.id] || 0;
         const isCompleted = completedSet.has(n.id);
+        const isCritical = criticalPathNodes.has(n.id);
         let priority = 'Pendiente';
         let colorTheme = { bg: 'bg-slate-100', border: 'border-slate-500', text: 'text-slate-900', lightText: 'text-slate-700' };
 
         if (isCompleted) {
           priority = 'Completado';
           colorTheme = { bg: 'bg-green-100', border: 'border-green-500', text: 'text-green-900', lightText: 'text-green-700' };
-        } else if (depth === maxDepth && maxDepth > 0) {
+        } else if (isCritical) {
           priority = 'Ruta Crítica';
           colorTheme = { bg: 'bg-indigo-100', border: 'border-indigo-500', text: 'text-indigo-900', lightText: 'text-indigo-700' };
         }
@@ -197,6 +213,17 @@ export function CurriculumMap() {
       colorTheme: { bg: 'bg-slate-100', border: 'border-slate-500', text: 'text-slate-900', lightText: 'text-slate-700' }
     };
     setSelectedSubject(details);
+  };
+
+  const handleToggleHistory = async () => {
+    if (!selectedSubject) return;
+    try {
+      await PlanningService.toggleHistory(studentId, selectedSubject.id);
+      toast.success(`Estado de "${selectedSubject.name}" actualizado.`);
+      loadGraph(); // Recargar el grafo para actualizar colores
+    } catch (error) {
+      toast.error('Error al actualizar historial');
+    }
   };
 
   const handleAddPlan = () => {
@@ -356,11 +383,17 @@ export function CurriculumMap() {
                   Gestiona esta materia en tu plan de horario.
                 </p>
                 <button 
-                  className={`w-full py-2 ${isSubjectAdded ? 'bg-slate-300 text-slate-600 cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-700'} rounded text-sm font-medium transition`}
+                  className={`w-full py-2 ${isSubjectAdded ? 'bg-slate-300 text-slate-600 cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-700'} rounded text-sm font-medium transition mb-2`}
                   onClick={handleAddPlan}
                   disabled={isSubjectAdded}
                 >
                   {isSubjectAdded ? 'En tu plan de estudio' : 'Agregar al Plan'}
+                </button>
+                <button 
+                  className={`w-full py-2 bg-white text-indigo-700 border border-indigo-200 hover:bg-indigo-50 rounded text-sm font-medium transition`}
+                  onClick={handleToggleHistory}
+                >
+                  {selectedSubject.priority === 'Completado' ? 'Marcar como Pendiente' : 'Marcar como Completada'}
                 </button>
               </div>
             </div>

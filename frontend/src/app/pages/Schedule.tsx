@@ -31,7 +31,7 @@ export function Schedule() {
   const handleGeneratePlan = async () => {
     setIsGenerating(true);
     try {
-      const planRes = await PlanningService.generatePlan(studentId, 18); // 18 max credits
+      const planRes = await PlanningService.generatePlan(studentId, 21); // 21 max credits
       const graph = await CurriculumService.getGraph();
       
       const courseMap = new Map();

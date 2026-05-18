@@ -4,7 +4,6 @@ import { Layout } from "./components/Layout";
 import { Dashboard } from "./pages/Dashboard";
 import { CurriculumMap } from "./pages/CurriculumMap";
 import { Schedule } from "./pages/Schedule";
-import { Progress } from "./pages/Progress";
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +13,6 @@ export const router = createBrowserRouter([
       { index: true, Component: Dashboard },
       { path: "mapa", Component: CurriculumMap },
       { path: "horario", Component: Schedule },
-      { path: "progreso", Component: Progress },
     ],
   },
 ]);

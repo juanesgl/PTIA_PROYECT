@@ -71,7 +71,6 @@ export function Layout() {
           <NavItem to="/" icon={<LayoutDashboard size={18} />} label="Dashboard" />
           <NavItem to="/mapa" icon={<Map size={18} />} label="Mapa Curricular" />
           <NavItem to="/horario" icon={<Clock size={18} />} label="Horario" />
-          <NavItem to="/progreso" icon={<LineChart size={18} />} label="Progreso" />
           
           <div className="pt-6 pb-2 pl-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">
             Recomendaciones IA
