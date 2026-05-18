@@ -7,8 +7,19 @@ from application.use_cases.curriculum_use_cases import CurriculumUseCases
 
 router = APIRouter(prefix="/curriculum", tags=["Curriculum"])
 
-@router.get("/graph", response_model=GraphResponse)
+@router.get(
+    "/graph", 
+    response_model=GraphResponse,
+    summary="Get Curriculum Graph",
+    description="Retrieves the full curriculum map for the academic program. The response represents a Directed Acyclic Graph (DAG) including all courses (nodes) and their prerequisite relationships (edges).",
+    response_description="A GraphResponse object containing 'nodes' (courses) and 'edges' (prerequisites)."
+)
 def get_graph(use_cases: CurriculumUseCases = Depends(get_curriculum_use_cases)):
+    """
+    Fetch the complete curriculum DAG structure.
+    
+    - **Returns:** A graph structure where nodes contain course details (credits, name, suggested semester) and edges indicate strict prerequisite dependencies.
+    """
     graph = use_cases.get_curriculum_graph()
     
     nodes = [
@@ -28,6 +39,17 @@ def get_graph(use_cases: CurriculumUseCases = Depends(get_curriculum_use_cases))
             
     return GraphResponse(nodes=nodes, edges=edges)
 
-@router.get("/toposort", response_model=List[UUID])
+@router.get(
+    "/toposort", 
+    response_model=List[UUID],
+    summary="Get Topological Sort",
+    description="Computes and returns a valid topological ordering of the curriculum graph. This represents a safe linear sequence of courses where all prerequisites are satisfied before a dependent course is taken.",
+    response_description="A list of course UUIDs ordered topologically."
+)
 def get_toposort(use_cases: CurriculumUseCases = Depends(get_curriculum_use_cases)):
+    """
+    Perform a topological sort on the curriculum DAG.
+    
+    - **Returns:** An ordered list of UUIDs representing a valid course taking sequence.
+    """
     return use_cases.get_toposort()
