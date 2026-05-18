@@ -35,7 +35,6 @@ export function Dashboard() {
             }
         });
 
-        // Mock data for the chart to match the Figma look, but adapted to 5.0 GPA and max 18 credits
         const mockChartData = [
           { name: 'Semestre 1', credits: 16, gpa: 4.1 },
           { name: 'Semestre 2', credits: 18, gpa: 4.2 },
@@ -49,7 +48,7 @@ export function Dashboard() {
           completedCredits,
           gpa: gpaData.gpa.toFixed(1),
           semestersLeft: Math.ceil((totalCredits - completedCredits) / 18),
-          currentPace: 18, // adapted pace
+          currentPace: 18, 
           chartData: mockChartData
         });
       } catch (error) {
