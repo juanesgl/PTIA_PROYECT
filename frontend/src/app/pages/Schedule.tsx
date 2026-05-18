@@ -31,14 +31,14 @@ export function Schedule() {
   const handleGeneratePlan = async () => {
     setIsGenerating(true);
     try {
-      const planRes = await PlanningService.generatePlan(studentId, 21); // 21 max credits
+      const planRes = await PlanningService.generatePlan(studentId, 21);
       const graph = await CurriculumService.getGraph();
       
       const courseMap = new Map();
       graph.nodes.forEach(n => courseMap.set(n.id, n.name));
 
       if (planRes.semesters.length > 0) {
-        // Take the first semester's courses to plan the current schedule
+      
         const nextSemester = planRes.semesters[0].courses;
         
         let newClasses: any[] = [];
@@ -62,7 +62,6 @@ export function Schedule() {
           });
         });
 
-        // Use context setter to replace classes if it exists, otherwise add them individually
         if (setClasses) {
            setClasses(newClasses);
         } else {
