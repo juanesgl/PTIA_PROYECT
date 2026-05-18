@@ -1,0 +1,508 @@
+{
+  "courses": [
+    {
+      "id": "10000000-0000-0000-0000-000000000001",
+      "code": "CALD",
+      "name": "Cálculo Diferencial",
+      "credits": 3,
+      "suggested_semester": 1
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000002",
+      "code": "ALLI",
+      "name": "Álgebra Lineal",
+      "credits": 3,
+      "suggested_semester": 1
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000003",
+      "code": "PRI1IS",
+      "name": "Proyecto Integrador 1 Introducción a la Ingeniería de Sistemas",
+      "credits": 3,
+      "suggested_semester": 1
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000004",
+      "code": "IPRO",
+      "name": "Introducción a la Programación",
+      "credits": 3,
+      "suggested_semester": 1
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000005",
+      "code": "FCO1",
+      "name": "Fundamentos de la Comunicación 1",
+      "credits": 2,
+      "suggested_semester": 1
+    },
+    {
+      "id": "10000000-0000-0000-0000-000000000006",
+      "code": "CLE1",
+      "name": "Cursos de Libre Elección",
+      "credits": 2,
+      "suggested_semester": 1
+    },
+    {
+      "id": "20000000-0000-0000-0000-000000000001",
+      "code": "CALI",
+      "name": "Cálculo Integral",
+      "credits": 3,
+      "suggested_semester": 2
+    },
+    {
+      "id": "20000000-0000-0000-0000-000000000002",
+      "code": "FIS1",
+      "name": "Física 1",
+      "credits": 3,
+      "suggested_semester": 2
+    },
+    {
+      "id": "20000000-0000-0000-0000-000000000003",
+      "code": "DDYA",
+      "name": "Diseño de Datos y Algoritmos",
+      "credits": 4,
+      "suggested_semester": 2
+    },
+    {
+      "id": "20000000-0000-0000-0000-000000000004",
+      "code": "MPIN",
+      "name": "Matemáticas para Informática",
+      "credits": 3,
+      "suggested_semester": 2
+    },
+    {
+      "id": "20000000-0000-0000-0000-000000000005",
+      "code": "HGCL",
+      "name": "Historia y Geografía de Colombia",
+      "credits": 2,
+      "suggested_semester": 2
+    },
+    {
+      "id": "20000000-0000-0000-0000-000000000006",
+      "code": "CLE2",
+      "name": "Cursos de Libre Elección",
+      "credits": 3,
+      "suggested_semester": 2
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000001",
+      "code": "CALV",
+      "name": "Cálculo vectorial",
+      "credits": 3,
+      "suggested_semester": 3
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000002",
+      "code": "PRYE",
+      "name": "Probabilidad y Estadística",
+      "credits": 3,
+      "suggested_semester": 3
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000003",
+      "code": "FUEC",
+      "name": "Fundamentos Económicos",
+      "credits": 2,
+      "suggested_semester": 3
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000004",
+      "code": "MYSD",
+      "name": "Modelos y Servicios de Datos",
+      "credits": 4,
+      "suggested_semester": 3
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000005",
+      "code": "LYMD",
+      "name": "Lógica y Matemáticas Discretas",
+      "credits": 4,
+      "suggested_semester": 3
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000006",
+      "code": "CLE3",
+      "name": "Cursos de Libre Elección",
+      "credits": 2,
+      "suggested_semester": 3
+    },
+    {
+      "id": "40000000-0000-0000-0000-000000000001",
+      "code": "FIS2",
+      "name": "Física 2",
+      "credits": 3,
+      "suggested_semester": 4
+    },
+    {
+      "id": "40000000-0000-0000-0000-000000000002",
+      "code": "ODSC",
+      "name": "Organización de los Sistemas de Cómputo",
+      "credits": 3,
+      "suggested_semester": 4
+    },
+    {
+      "id": "40000000-0000-0000-0000-000000000003",
+      "code": "FUPR",
+      "name": "Fundamentos de Proyectos",
+      "credits": 2,
+      "suggested_semester": 4
+    },
+    {
+      "id": "40000000-0000-0000-0000-000000000004",
+      "code": "DOPO",
+      "name": "Desarrollo Orientado por Objetos",
+      "credits": 4,
+      "suggested_semester": 4
+    },
+    {
+      "id": "40000000-0000-0000-0000-000000000005",
+      "code": "TPYC",
+      "name": "Teoría de la Programación y la Computación",
+      "credits": 3,
+      "suggested_semester": 4
+    },
+    {
+      "id": "40000000-0000-0000-0000-000000000006",
+      "code": "CLE4",
+      "name": "Cursos de Libre Elección",
+      "credits": 3,
+      "suggested_semester": 4
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000001",
+      "code": "ECDI",
+      "name": "Ecuaciones Diferenciales",
+      "credits": 3,
+      "suggested_semester": 5
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000002",
+      "code": "AYSR",
+      "name": "Arquitectura y Servicios de Red",
+      "credits": 4,
+      "suggested_semester": 5
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000003",
+      "code": "PRI2IS",
+      "name": "Proyecto Integrador 2 - Estrategia de Organizaciones y Procesos",
+      "credits": 3,
+      "suggested_semester": 5
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000004",
+      "code": "DOSW",
+      "name": "Desarrollo y Operaciones Software",
+      "credits": 4,
+      "suggested_semester": 5
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000005",
+      "code": "CLE5",
+      "name": "Cursos de Libre Elección",
+      "credits": 2,
+      "suggested_semester": 5
+    },
+    {
+      "id": "50000000-0000-0000-0000-000000000006",
+      "code": "CLE6",
+      "name": "Cursos de Libre Elección",
+      "credits": 2,
+      "suggested_semester": 5
+    },
+    {
+      "id": "60000000-0000-0000-0000-000000000001",
+      "code": "FDSI",
+      "name": "Fundamentos de Seguridad de la Información",
+      "credits": 3,
+      "suggested_semester": 6
+    },
+    {
+      "id": "60000000-0000-0000-0000-000000000002",
+      "code": "ARSW",
+      "name": "Arquitecturas de Software",
+      "credits": 4,
+      "suggested_semester": 6
+    },
+    {
+      "id": "60000000-0000-0000-0000-000000000003",
+      "code": "PTIA",
+      "name": "Principios y Tecnologías IA",
+      "credits": 3,
+      "suggested_semester": 6
+    },
+    {
+      "id": "60000000-0000-0000-0000-000000000004",
+      "code": "CIPP",
+      "name": "Colombia: Realidad, Inst. Políticas y Paz",
+      "credits": 2,
+      "suggested_semester": 6
+    },
+    {
+      "id": "60000000-0000-0000-0000-000000000005",
+      "code": "CLE7",
+      "name": "Cursos de Libre Elección",
+      "credits": 3,
+      "suggested_semester": 6
+    },
+    {
+      "id": "60000000-0000-0000-0000-000000000006",
+      "code": "CLE8",
+      "name": "Cursos de Libre Elección",
+      "credits": 3,
+      "suggested_semester": 6
+    },
+    {
+      "id": "70000000-0000-0000-0000-000000000001",
+      "code": "SOGR",
+      "name": "Seminario de Opción de Grado",
+      "credits": 2,
+      "suggested_semester": 7
+    },
+    {
+      "id": "70000000-0000-0000-0000-000000000002",
+      "code": "TDSE",
+      "name": "Transformación Digital y Soluciones Empresariales",
+      "credits": 4,
+      "suggested_semester": 7
+    },
+    {
+      "id": "70000000-0000-0000-0000-000000000003",
+      "code": "SWNT",
+      "name": "Innovación Software Apoyada en Nuevas Tecnologías",
+      "credits": 4,
+      "suggested_semester": 7
+    },
+    {
+      "id": "70000000-0000-0000-0000-000000000004",
+      "code": "ETO1",
+      "name": "Electiva Técnica 1",
+      "credits": 3,
+      "suggested_semester": 7
+    },
+    {
+      "id": "70000000-0000-0000-0000-000000000005",
+      "code": "ETO2",
+      "name": "Electiva Técnica 2",
+      "credits": 3,
+      "suggested_semester": 7
+    },
+    {
+      "id": "70000000-0000-0000-0000-000000000006",
+      "code": "CLE9",
+      "name": "Cursos de Libre Elección",
+      "credits": 2,
+      "suggested_semester": 7
+    },
+    {
+      "id": "80000000-0000-0000-0000-000000000001",
+      "code": "OGR1",
+      "name": "Opción de Grado 1",
+      "credits": 3,
+      "suggested_semester": 8
+    },
+    {
+      "id": "80000000-0000-0000-0000-000000000002",
+      "code": "OGR2",
+      "name": "Opción de Grado 2",
+      "credits": 3,
+      "suggested_semester": 8
+    },
+    {
+      "id": "80000000-0000-0000-0000-000000000003",
+      "code": "OGR3",
+      "name": "Opción de Grado 3",
+      "credits": 3,
+      "suggested_semester": 8
+    },
+    {
+      "id": "80000000-0000-0000-0000-000000000004",
+      "code": "OGR4",
+      "name": "Opción de Grado 4",
+      "credits": 3,
+      "suggested_semester": 8
+    },
+    {
+      "id": "80000000-0000-0000-0000-000000000005",
+      "code": "ETO3",
+      "name": "Electiva Técnica 3",
+      "credits": 3,
+      "suggested_semester": 8
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000001",
+      "course_id": "20000000-0000-0000-0000-000000000001",
+      "prerequisite_id": "10000000-0000-0000-0000-000000000001",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000002",
+      "course_id": "20000000-0000-0000-0000-000000000002",
+      "prerequisite_id": "10000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000003",
+      "course_id": "20000000-0000-0000-0000-000000000003",
+      "prerequisite_id": "10000000-0000-0000-0000-000000000004",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000004",
+      "course_id": "20000000-0000-0000-0000-000000000005",
+      "prerequisite_id": "10000000-0000-0000-0000-000000000005",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000005",
+      "course_id": "30000000-0000-0000-0000-000000000001",
+      "prerequisite_id": "20000000-0000-0000-0000-000000000001",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000006",
+      "course_id": "30000000-0000-0000-0000-000000000001",
+      "prerequisite_id": "10000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000007",
+      "course_id": "30000000-0000-0000-0000-000000000002",
+      "prerequisite_id": "20000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000008",
+      "course_id": "30000000-0000-0000-0000-000000000004",
+      "prerequisite_id": "20000000-0000-0000-0000-000000000003",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000009",
+      "course_id": "30000000-0000-0000-0000-000000000005",
+      "prerequisite_id": "20000000-0000-0000-0000-000000000004",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000010",
+      "course_id": "40000000-0000-0000-0000-000000000001",
+      "prerequisite_id": "20000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000011",
+      "course_id": "40000000-0000-0000-0000-000000000002",
+      "prerequisite_id": "20000000-0000-0000-0000-000000000003",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000012",
+      "course_id": "40000000-0000-0000-0000-000000000004",
+      "prerequisite_id": "30000000-0000-0000-0000-000000000004",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000013",
+      "course_id": "40000000-0000-0000-0000-000000000004",
+      "prerequisite_id": "20000000-0000-0000-0000-000000000003",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000014",
+      "course_id": "40000000-0000-0000-0000-000000000005",
+      "prerequisite_id": "30000000-0000-0000-0000-000000000005",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000015",
+      "course_id": "50000000-0000-0000-0000-000000000001",
+      "prerequisite_id": "20000000-0000-0000-0000-000000000001",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000016",
+      "course_id": "50000000-0000-0000-0000-000000000001",
+      "prerequisite_id": "10000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000017",
+      "course_id": "50000000-0000-0000-0000-000000000002",
+      "prerequisite_id": "40000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000018",
+      "course_id": "50000000-0000-0000-0000-000000000003",
+      "prerequisite_id": "10000000-0000-0000-0000-000000000003",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000019",
+      "course_id": "50000000-0000-0000-0000-000000000004",
+      "prerequisite_id": "40000000-0000-0000-0000-000000000004",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000020",
+      "course_id": "60000000-0000-0000-0000-000000000001",
+      "prerequisite_id": "50000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000021",
+      "course_id": "60000000-0000-0000-0000-000000000002",
+      "prerequisite_id": "50000000-0000-0000-0000-000000000004",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000022",
+      "course_id": "60000000-0000-0000-0000-000000000003",
+      "prerequisite_id": "30000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000023",
+      "course_id": "60000000-0000-0000-0000-000000000003",
+      "prerequisite_id": "40000000-0000-0000-0000-000000000004",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000024",
+      "course_id": "70000000-0000-0000-0000-000000000001",
+      "prerequisite_id": "50000000-0000-0000-0000-000000000003",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000025",
+      "course_id": "70000000-0000-0000-0000-000000000002",
+      "prerequisite_id": "50000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    },
+    {
+      "id": "aaaa1000-0000-0000-0000-000000000026",
+      "course_id": "70000000-0000-0000-0000-000000000003",
+      "prerequisite_id": "60000000-0000-0000-0000-000000000002",
+      "type": "mandatory"
+    }
+  ],
+  "students": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "name": "Estudiante de Prueba",
+      "enrollment_year": 2023,
+      "history": [
+        {
+          "id": "bbbbb111-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+          "student_id": "00000000-0000-0000-0000-000000000001",
+          "course_id": "10000000-0000-0000-0000-000000000001",
+          "status": "passed",
+          "grade": 90,
+          "period": "2023-1"
+        }
+      ]
+    }
+  ]
+}
