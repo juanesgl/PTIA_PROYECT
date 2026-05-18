@@ -4,7 +4,7 @@ from uuid import UUID
 
 class Course(BaseModel):
     id: UUID
-    code: str = Field(..., description="Course code, e.g., SIS101")
+    code: str = Field(..., description="Course code, e.g., DDYA, DOPO")
     name: str
     credits: int
     suggested_semester: int = Field(..., ge=1, le=10)

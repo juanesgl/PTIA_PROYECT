@@ -17,10 +17,6 @@ app = FastAPI(
     title="AcademicFlow Engine API",
     description=description,
     version="1.0.0",
-    contact={
-        "name": "Juan",
-        "url": "https://github.com/juanesgl",
-    }
 )
 
 app.add_middleware(
